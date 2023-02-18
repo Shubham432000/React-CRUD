@@ -3,7 +3,7 @@ import React from 'react'
 const Trust = () => {
   return (
     <div>
-      <h>hello hsdh</h>
+      <h>hello shubham</h>
     </div>
   )
 }
