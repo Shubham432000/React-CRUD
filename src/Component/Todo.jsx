@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CiEdit } from "react-icons/ci";
+import { FiEdit } from "react-icons/fi";
 import { MdDeleteForever } from "react-icons/md";
 const Todo = () => {
   const [name, setName] = useState("");
@@ -53,25 +53,25 @@ const Todo = () => {
         {!editclick?<button
           onClick={submit}
           type="submit"
-          className="text-white   bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white ml-[10px]   bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Add
         </button>:<button
           onClick={updateData}
           type="submit"
-          className="text-white   bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white ml-[10px]  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Update
         </button>}
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-[50px]">
         <table className="w-1/2 text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th className="px-6 py-3">Product name</th>
-              <th className="px-6 py-3">Action</th>
-              <th className="px-6 py-3">Action</th>
+              <th className="px-6 py-3">Edit</th>
+              <th className="px-6 py-3">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -89,10 +89,10 @@ const Todo = () => {
                   </th>
 
                   <td className="px-6 py-4">
-                    <CiEdit onClick={() => editData(id)} />
+                    <FiEdit size="25px" onClick={() => editData(id)} />
                   </td>
                   <td className="px-6 py-4">
-                    <MdDeleteForever onClick={() => deleteData(id)} />
+                    <MdDeleteForever size="25px" onClick={() => deleteData(id)} />
                   </td>
                 </tr>
               );
